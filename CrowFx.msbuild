@@ -1,0 +1,21 @@
+<Project DefaultTargets="CrowFx" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <NuGetExe Condition="$(NuGetExe) == ''">.\.nuget\nuget.exe</NuGetExe>
+  </PropertyGroup>
+  <Target Name="Crowfx">
+    <ItemGroup>
+      <NuGetPackageConfigs Include="**\packages.config" />
+    </ItemGroup>
+    <Exec Command="$(NuGetExe) install %(NuGetPackageConfigs.Identity) -o packages" />
+  </Target>
+  <!--<Target Name="Build">
+    <MSBuild Projects="$(ProjectFile)" />
+    <MSBuild Projects="$(TestProjectFile)" />
+  </Target>-->
+  <!--<Target Name="Test" DependsOnTargets="Build">
+    <CreateItem Include="$(ProjectTestDir)\$(ClassLibraryOutputDirectory)\*.Tests.dll">
+      <Output TaskParameter="Include" ItemName="TestAssembly" />
+    </CreateItem>
+    <NUnit Assemblies="@(TestAssembly)" />
+  </Target>-->
+</Project>

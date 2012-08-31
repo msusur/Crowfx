@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9EA347B8-E921-44F6-BB2C-618312747E47}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Crow.Library.Foundation</RootNamespace>
+    <AssemblyName>Crow.Library.Foundation</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Binaries\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\Binaries\Crow.Library.Foundation.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bootstrapper\IAssemblyLoader.cs" />
+    <Compile Include="Bootstrapper\IModule.cs" />
+    <Compile Include="Common\Account\IAccountService.cs" />
+    <Compile Include="Common\Account\UserContext.cs" />
+    <Compile Include="Common\Aspects\IMethodInvocationContext.cs" />
+    <Compile Include="Common\Caching\ICacheManager.cs" />
+    <Compile Include="Common\Configuration\IConfigurationHelper.cs" />
+    <Compile Include="Common\ConnectionStringInformation.cs" />
+    <Compile Include="Common\Helpers\AssemblyHelper.cs" />
+    <Compile Include="Common\Helpers\BindingListExtensions.cs" />
+    <Compile Include="Common\Helpers\UrlParser.cs" />
+    <Compile Include="Common\Helpers\ValidationUtilExtension.cs" />
+    <Compile Include="Common\IItemManager.cs" />
+    <Compile Include="Common\IQueryStore.cs" />
+    <Compile Include="Common\Messages\DialogResults.cs" />
+    <Compile Include="Common\Messages\IMessagingService.cs" />
+    <Compile Include="Common\Templating\ITemplateEngine.cs" />
+    <Compile Include="Conversion\ConversionHelper.cs" />
+    <Compile Include="Conversion\StringExtensions.cs" />
+    <Compile Include="DatabaseLayer\DatabaseAttributes.cs" />
+    <Compile Include="DatabaseLayer\ISqlExpressionVisitor.cs" />
+    <Compile Include="DependencyInjection\IInjectionContainer.cs" />
+    <Compile Include="Exceptions\ConversionException.cs" />
+    <Compile Include="Exceptions\DependencyResolveFailedException.cs" />
+    <Compile Include="Exceptions\InvalidUrlStringException.cs" />
+    <Compile Include="Exceptions\QueryForMethodNotFoundException.cs" />
+    <Compile Include="Extensions\AssertExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="FileOperations\IFileOperations.cs" />
+    <Compile Include="Hosting\ICrowHttpHost.cs" />
+    <Compile Include="Hosting\IHostConfiguration.cs" />
+    <Compile Include="Hosting\IRequestFilter.cs" />
+    <Compile Include="Logger\ILog.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strings.cs" />
+    <Compile Include="Validations\AnnotationAttributes\ListCountAttribute.cs" />
+    <Compile Include="Validations\ModelValidationProvider.cs" />
+    <Compile Include="Validations\ValidationMessageBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
