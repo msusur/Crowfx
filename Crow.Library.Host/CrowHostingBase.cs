@@ -14,6 +14,9 @@ namespace Crow.Library.Host
 {
     /// <summary>
     /// Base class for hosting.
+    /// 
+    /// 
+    /// 
     /// </summary>
     public abstract class CrowHostingBase : ICrowHttpHost, ITypeListHost
     {
