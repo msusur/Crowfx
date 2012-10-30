@@ -8,7 +8,6 @@ using Crow.Library.Foundation.Hosting;
 using Crow.Library.Foundation.Common.Configuration;
 using Crow.Library.Foundation;
 
-
 namespace Crow.Library.Host
 {
     /// <summary>
@@ -46,10 +45,10 @@ namespace Crow.Library.Host
         /// </summary>
         public static ICrowHttpHost ConfigureHost(IInjectionContainer container)
         {
-            IConfigurationHelper configuration = container.Resolve<IConfigurationHelper>();
-            int port = configuration.Get<int>(Strings.Configuration.HostingPort, Strings.Defaults.DefaultPort);
-            string host = configuration.Get(Strings.Configuration.HostingHostname, Strings.Defaults.DefaultHostname);
-            bool isHttps = configuration.Get<bool>(Strings.Configuration.HostingIsHttps, false);
+            var configuration = container.Resolve<IConfigurationHelper>();
+            var port = configuration.Get(Strings.Configuration.HostingPort, Strings.Defaults.DefaultPort);
+            var host = configuration.Get(Strings.Configuration.HostingHostname, Strings.Defaults.DefaultHostname);
+            var isHttps = configuration.Get(Strings.Configuration.HostingIsHttps, false);
             return ConfigureHost(container, host, port, isHttps);
         }
         /// <summary>
@@ -57,10 +56,10 @@ namespace Crow.Library.Host
         /// </summary>
         public static ICrowHttpHost ConfigureHost(IInjectionContainer container, string baseUrl)
         {
-            IConfigurationHelper configuration = container.Resolve<IConfigurationHelper>();
-            int port = configuration.Get<int>(Strings.Configuration.HostingPort, Strings.Defaults.DefaultPort);
-            string host = baseUrl;
-            bool isHttps = configuration.Get<bool>(Strings.Configuration.HostingIsHttps, false);
+            var configuration = container.Resolve<IConfigurationHelper>();
+            var port = configuration.Get<int>(Strings.Configuration.HostingPort, Strings.Defaults.DefaultPort);
+            var host = baseUrl;
+            var isHttps = configuration.Get<bool>(Strings.Configuration.HostingIsHttps, false);
             return ConfigureHost(container, host, port, isHttps);
         }
         /// <summary>
@@ -68,8 +67,8 @@ namespace Crow.Library.Host
         /// </summary>
         public static ICrowHttpHost ConfigureHost(IInjectionContainer container, string baseUrl, int port, bool isHttps = false)
         {
-            ICrowHttpHost host = container.Resolve<ICrowHttpHost>();
-            IHostConfiguration configuration = container.Resolve<IHostConfiguration>();
+            var host = container.Resolve<ICrowHttpHost>();
+            var configuration = container.Resolve<IHostConfiguration>();
             configuration.BaseUrl = baseUrl;
             configuration.IsHttps = isHttps;
             configuration.Port = port;
