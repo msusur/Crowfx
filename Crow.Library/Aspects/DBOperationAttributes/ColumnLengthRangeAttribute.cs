@@ -11,7 +11,7 @@ namespace Crow.Library.Aspects.DBOperationAttributes
     {
         public int MaxLength { get; set; }
         public int MinLength { get; set; }
-        public string PropertyName { get; set; }
+        public string PropertyName { get; set;  }
 
         public ColumnLengthRangeAttribute(int minLength, int maxLength, string propertyName)
         {
