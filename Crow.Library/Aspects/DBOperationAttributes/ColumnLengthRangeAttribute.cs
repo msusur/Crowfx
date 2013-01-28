@@ -12,7 +12,7 @@ namespace Crow.Library.Aspects.DBOperationAttributes
         public int MaxLength { get; set; }
         public int MinLength { get; set; }
         public string PropertyName { get; set; }
-
+        //comment
         public ColumnLengthRangeAttribute(int minLength, int maxLength, string propertyName)
         {
             MinLength = minLength;
