@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Crow", "Crow", "{6897122E-F566-42F2-8361-BE27624ED4F8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{F08B5900-3FB3-42E6-ACD1-0D0D11BFEDF6}"
@@ -51,51 +53,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crow.Library.Host.AspNet", "Crow.Library.Host.ASPNet\Crow.Library.Host.AspNet.csproj", "{DBECAAB4-2FD5-4440-A582-843B1BC014FB}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 10
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs23
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Crow.Library.Foundation\\Crow.Library.Foundation.csproj
-		SccProjectTopLevelParentUniqueName1 = CrowFx.sln
-		SccProjectName1 = Crow.Library.Foundation
-		SccLocalPath1 = Crow.Library.Foundation
-		SccProjectUniqueName2 = Crow.Library\\Crow.Library.csproj
-		SccProjectTopLevelParentUniqueName2 = CrowFx.sln
-		SccProjectName2 = Crow.Library
-		SccLocalPath2 = Crow.Library
-		SccProjectUniqueName3 = CrowSample\\CrowSample.csproj
-		SccProjectTopLevelParentUniqueName3 = CrowFx.sln
-		SccProjectName3 = CrowSample
-		SccLocalPath3 = CrowSample
-		SccProjectUniqueName4 = Crow.Library.Tests\\Crow.Library.Tests.csproj
-		SccProjectTopLevelParentUniqueName4 = CrowFx.sln
-		SccProjectName4 = Crow.Library.Tests
-		SccLocalPath4 = Crow.Library.Tests
-		SccProjectUniqueName5 = Crow.Library.Tests.Benchmarks\\Crow.Library.Tests.Benchmarks.csproj
-		SccProjectTopLevelParentUniqueName5 = CrowFx.sln
-		SccProjectName5 = Crow.Library.Tests.Benchmarks
-		SccLocalPath5 = Crow.Library.Tests.Benchmarks
-		SccProjectUniqueName6 = Crow.Library.Host\\Crow.Library.Host.csproj
-		SccProjectTopLevelParentUniqueName6 = CrowFx.sln
-		SccProjectName6 = Crow.Library.Host
-		SccLocalPath6 = Crow.Library.Host
-		SccProjectUniqueName7 = Crow.Library.Tests.Sandbox\\Crow.Library.Tests.Sandbox.csproj
-		SccProjectTopLevelParentUniqueName7 = CrowFx.sln
-		SccProjectName7 = Crow.Library.Tests.Sandbox
-		SccLocalPath7 = Crow.Library.Tests.Sandbox
-		SccProjectUniqueName8 = MvcHosting\\MvcHosting.csproj
-		SccProjectTopLevelParentUniqueName8 = CrowFx.sln
-		SccProjectName8 = MvcHosting
-		SccLocalPath8 = MvcHosting
-		SccProjectUniqueName9 = Crow.Library.Host.ASPNet\\Crow.Library.Host.AspNet.csproj
-		SccProjectTopLevelParentUniqueName9 = CrowFx.sln
-		SccProjectName9 = Crow.Library.Host.ASPNet
-		SccLocalPath9 = Crow.Library.Host.ASPNet
-	EndGlobalSection
-	GlobalSection(TestCaseManagementSettings) = postSolution
-		CategoryFile = CrowFx.vsmdi
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
@@ -214,5 +171,8 @@ Global
 		{79472686-E37B-4D62-9BA1-F1BD7496CE3E} = {3E483E78-8E27-42FD-BA4F-57E679F5E121}
 		{77301A6D-9749-46A8-8497-9C9E7FB212BE} = {3E483E78-8E27-42FD-BA4F-57E679F5E121}
 		{8201EB7A-4192-498E-911B-5189D30F67F0} = {1C4FEDA0-B648-44B0-BE75-FE6318D294B2}
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = CrowFx.vsmdi
 	EndGlobalSection
 EndGlobal
